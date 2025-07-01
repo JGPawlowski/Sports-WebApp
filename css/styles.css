@@ -1,0 +1,157 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: Inder, sans-serif;
+}
+
+/*********************************HEADER*************************************/
+
+
+header, header * {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1rem;
+    gap: 1rem;
+    font-family: Bitcount Grid Double, sans-serif;
+}
+
+.heading-name {
+    font-size: 3rem;
+    color: rgb(24, 24, 121);
+    text-decoration: underline overline;
+}
+
+.nav-container {
+    gap: 1rem;
+    align-items: center;
+    gap: 1rem;
+}
+
+/* for when the screen gets too small */
+.nav-container-second {
+    display: none;
+}
+
+/****************************************************************************/
+
+.under-header {
+    border-top: 2px solid black;
+    border-bottom: 2px solid black;
+    padding: 0.5rem;
+    margin: 0.5rem;
+    text-align: center;
+    justify-content: center;
+}
+
+/*********************************FOOTER*************************************/
+
+
+body {
+    font-size: 1rem;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+main {
+  display: grid;
+  grid-template-columns: 1fr 1fr; /* Equal widths */
+  height: 100vh;
+  gap: 1rem;
+  padding: 2rem;
+}
+
+.left-container {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem; /* control spacing between top/bottom */
+}
+
+.top-left,
+.bottom-left,
+.right {
+    padding: 1rem;
+    border: 2px solid black;
+    font-size: 1rem;
+}
+
+.top-left {
+    min-height: 100%;
+}
+
+.bottom-left {
+    display: none;
+}
+
+.right {
+  grid-column: 2;
+  min-height: 100%;
+}
+
+
+
+
+footer {
+    font-size: 0.85rem;
+    border: 2px solid black;
+}
+
+.footer-grid {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    gap: 1.5rem;
+}
+
+/* Target: Every <div> that is a direct child of a <footer> element */
+footer > div {
+    padding: 1.5rem;
+}
+
+.footer-links {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.footer-grid {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    gap: 2rem;
+}
+
+
+
+
+
+/* mobile size */
+@media (min-width: 650px) {
+
+    .top-left {
+        min-height: 50%;
+    }
+    .bottom-left {
+        display: block;
+        min-height: 50%;
+    }
+    
+    footer {
+        font-size: 0.8;
+    }
+
+    .footer-grid {
+        display: flex;
+        flex-direction: row;
+        gap: 1rem;
+    }
+
+    .nav-container-second {
+        display: block;
+    }
+
+}
